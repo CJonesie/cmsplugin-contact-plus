@@ -75,7 +75,7 @@ class ContactPlus(CMSPlugin):
 
 
 def recaptcha_installed():
-    return ('captcha' in settings.INSTALLED_APPS and
+    return ('snowpenguin.django.recaptcha2' in settings.INSTALLED_APPS and
             all([hasattr(settings, s)
                 for s in ['RECAPTCHA_PUBLIC_KEY', 'RECAPTCHA_PRIVATE_KEY']]))
 
